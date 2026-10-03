@@ -856,8 +856,8 @@ if (typeof module !== 'undefined') module.exports = SITE;
    没有 vf 字段 = 我亲自打开过并返回 200
    ============================================================ */
 SITE.verif = {
-  testedAt: '2026-09-30',
-  method: '本机 curl（跟随重定向，18–45 秒超时，真实浏览器 UA）+ Chrome DevTools 浏览器二次确认',
+  testedAt: '第一轮 2026-09-30（curl 全量扫描）· 第二轮 2026-10-03（真实浏览器逐条打开）',
+  method: 'curl 全量 116 条扫描（跟随重定向，18–45 秒超时，真实浏览器 UA）+ Chrome DevTools 真实浏览器逐条打开；SO-101 价格另用 GitHub 官方 BOM 原始文件核对',
   bot: [
     { u: 'https://www.allaboutcircuits.com/textbook/', n: 'All About Circuits《Lessons in Electric Circuits》', m: 1, note: 'Cloudflare 托管挑战，headless 浏览器 25 秒未通过' },
     { u: 'https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about', n: 'OpenCV 官方 Bootcamp', m: 5 },
