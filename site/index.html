@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>六个月机器人工程师 · 完整路线与学习资源库</title>
+<meta name="description" content="基于 X 上 285 万人读过的英文路线图《How to become a Robotics Engineer in 6 months》，加上中文版的逐条核查与三处勘误。全部学习资源按月整理，含国内价格与渠道。">
+<meta name="theme-color" content="#0b0e14">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">🤖 六个月<span>机器人工程师</span></div>
+  <a class="n" href="#why">为什么</a>
+  <a class="n" href="#roadmap">路线图</a>
+  <a class="n" href="#library">资源库</a>
+  <a class="n" href="#projects">项目</a>
+  <a class="n" href="#budget">预算</a>
+  <a class="n" href="#industry">行业数据</a>
+  <a class="n" href="#errata">勘误</a>
+  <a class="n" href="#verify">核验</a>
+  <a class="n" href="#ending">结语</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">◆ 路线图 · 资源库 · 项目库 · 勘误</div>
+  <h1 class="big">六个月，<em>造出会动的机器人</em></h1>
+  <p class="lede">
+    一份被 285 万人读过的英文六月路线图，逐条核过之后交给中文读者。每月一个可交付物，
+    从万用表量一个电阻开始，到在自己采的数据上训出一个策略为止。
+    这里的每一条链接都来自原文，每一处修正都有出处。
+  </p>
+  <div class="stats" id="stats"></div>
+  <div class="srcs" id="srcs"></div>
+</div></header>
+
+<!-- ============ 为什么是机器人 ============ -->
+<section id="why"><div class="wrap">
+  <div class="sh"><span class="n">01</span><h2>为什么是机器人，而不是再学一遍大模型</h2></div>
+  <p class="sd" id="whyLead"></p>
+  <div class="grid g2" id="whyReasons"></div>
+
+  <div class="note" style="margin-top:20px">
+    <b>原文最好的一句：</b>机器人的作品集是由「动过的东西」组成的，不是由「上完的课」组成的。
+  </div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="card" id="costCard"></div>
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:12px">招聘启事反复出现的四条要求</h3>
+      <div class="grid" style="gap:13px" id="reqs"></div>
+      <p style="color:var(--warn);font-size:13.5px;margin:15px 0 0" id="reqNote"></p>
+    </div>
+  </div>
+
+  <div class="blk" style="margin-top:26px">
+    <h4 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:12px">这个岗位实际分成八个专长方向，你选一个、其余保持看得懂</h4>
+    <div style="display:flex;flex-wrap:wrap;gap:8px" id="specialisms"></div>
+  </div>
+
+  <div class="blk" style="margin-top:30px">
+    <h4 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:12px">术语表 · 全文出现的高频词一次讲清</h4>
+    <div class="gl" id="gloss"></div>
+  </div>
+</div></section>
+
+<!-- ============ 路线图 ============ -->
+<section id="roadmap"><div class="wrap">
+  <div class="sh"><span class="n">02</span><h2>六个月路线图</h2></div>
+  <p class="sd">
+    顺序不能打乱：每一级台阶上那件东西，都是下一级的前提。第三月装的机械臂，是第六月采集示教数据的硬件；
+    第四月建的仿真机器人，是第五月验证控制算法的对象。每月月底必须有一件能动的东西。
+  </p>
+  <div class="tkhd" style="margin-bottom:18px">
+    <b>总进度</b><div class="prog" style="max-width:340px"><i id="pall" style="width:0"></i></div>
+    <span class="rcnt" id="tall">0 / 0 已完成</span>
+    <button class="fb" id="reset">清空进度</button>
+  </div>
+  <div id="months"></div>
+</div></section>
+
+<!-- ============ 资源库 ============ -->
+<section id="library"><div class="wrap">
+  <div class="sh"><span class="n">03</span><h2>学习资源库</h2></div>
+  <p class="sd">
+    原文列出的全部资源都在这里，一条不少。按月归属和类型可筛选，支持关键词搜索。
+    标「免费」的可以直接开始——原文的意思是：真正的好资源里，免费的那一批足够走完六个月。
+  </p>
+  <div class="tools">
+    <input class="srch" id="srch" type="search" placeholder="搜索资源名、用途说明、价格…  例：卡尔曼 / Gazebo / 舵机 / 免费" autocomplete="off">
+    <button class="fb" id="rreset">重置</button>
+    <span class="rcnt" id="rcount"></span>
+  </div>
+  <div class="tools"><span style="font-size:12px;color:var(--tx3);width:38px">按月</span><div style="display:flex;flex-wrap:wrap;gap:6px" id="fm"></div></div>
+  <div class="tools"><span style="font-size:12px;color:var(--tx3);width:38px">类型</span><div style="display:flex;flex-wrap:wrap;gap:6px" id="fk"></div></div>
+  <div class="tools"><span style="font-size:12px;color:var(--tx3);width:38px">核验</span><div style="display:flex;flex-wrap:wrap;gap:6px" id="fv"></div>
+    <span class="rcnt">共 <b id="vfCnt">0</b> 条未独立核验</span></div>
+  <div class="rlist" id="rlist"></div>
+</div></section>
+
+<!-- ============ 项目 ============ -->
+<section id="projects"><div class="wrap">
+  <div class="sh"><span class="n">04</span><h2>动手项目（共 <span id="ptot">0</span> 个）</h2></div>
+  <p class="sd">
+    勾选进度存在你的浏览器本地。原文的核心判断是：调坏的机器人和调好的同一个机器人并排对照，
+    是初学者能放进作品集里最有说服力的东西，因为它证明你理解这个环，而不是抄了一组参数。
+  </p>
+  <div class="grid" id="projectList" style="gap:14px"></div>
+</div></section>
+
+<!-- ============ 预算 ============ -->
+<section id="budget"><div class="wrap">
+  <div class="sh"><span class="n">05</span><h2>工具台预算：国内口径</h2></div>
+  <p class="sd">
+    原文的采购建议要反过来读。我们这里就是原文说的那个「便宜 3 到 10 倍」的供货地，
+    淘宝和拼多多当天下单次日到货——原文作者要等两到六周的东西，你等一天。
+  </p>
+  <div class="tbw" id="budgetTbl"></div>
+  <div class="note warn" style="margin-top:14px"><span class="lb">⚠ 这张表的国内价是估算</span>
+    <span id="budgetWarn"></span><br><br>
+    对比：第 3 月 SO-101 的淘宝价是<b style="color:var(--ok)">官方物料清单自带的价格与链接</b>（可直接查证），
+    与本表的估算不同源。把两者放在同一页而不加区分，就是我最初犯的错误。
+  </div>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:10px">第 1 月渠道</h3>
+      <p style="color:var(--tx2);font-size:14px;margin:0">
+        原文：第一单别省钱，从 Amazon 或原厂直发买，几天到手就能开工；等你知道 10k 电阻是干什么的，
+        再去 AliExpress 慢慢等。<br><br>
+        <b style="color:var(--ac)">国内反过来读：</b>淘宝、拼多多当天下单次日到货。
+        代价要说清楚——低价套件的元件一致性差，电阻标称和实测偏差、传感器批次差异都常见。
+        这不完全是坏事：它恰好逼你在第一个月就学会用万用表验货，而这正是原文第 1 月最看重的技能。
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:10px">SO-101 机械臂：官方清单自带的淘宝价</h3>
+      <p style="color:var(--tx2);font-size:14px;margin:0">
+        这是原文完全没写、对中文读者却最有价值的信息。官方物料清单本身就列了人民币价格和淘宝链接：
+        主从一对 <b style="color:var(--ok)">1343.16 元</b>，单条从臂 <b style="color:var(--ok)">682.23 元</b>。
+        229.88 美元按当前汇率约合 1600 多元人民币——淘宝渠道便宜了将近两成。<br><br>
+        <b style="color:var(--ac)">但省的不是核心件：</b>那颗 STS3215 舵机在中国、美国、欧洲三地几乎同价，
+        只有日本贵了四成半。国内真正的优势在它周围那一圈杂件的供应链密度上。
+        详见第 3 月「造一条真正的机械臂」。
+      </p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 行业数据 ============ -->
+<section id="industry"><div class="wrap">
+  <div class="sh"><span class="n">06</span><h2>行业数据</h2></div>
+  <p class="sd">
+    原文结尾那节叫「诚实地说需求」，作者把行业里流传最广的乐观数字拿去核，核不过的就说核不过。
+    中文核查指出这一节对中国读者需要整体换掉——原文是美国劳工统计局的数字，这里换成 IFR 的一手数据。
+  </p>
+
+  <div class="note"><b>中国一年装的工业机器人是美国的九倍以上。</b>五个主要市场 2025 年的新装机量里，
+  中国一家占全球的 59%，而美、日、韩三国相加不到中国的三成。</div>
+
+  <h3 style="font-size:16px;margin:26px 0 8px">中国（国际机器人联合会 IFR，2026-09-24 发布）</h3>
+  <p style="color:var(--tx3);font-size:13px;margin:0 0 12px" id="ifrSrc"></p>
+  <div class="tbw" id="ifrCn"></div>
+  <h3 style="font-size:16px;margin:26px 0 12px">全球总量</h3>
+  <div class="tbw" id="ifrGlobal"></div>
+  <div class="grid g2" style="margin-top:20px">
+    <div><h3 style="font-size:16px;margin-bottom:12px">其他主要市场</h3><div class="tbw" id="ifrOther"></div></div>
+    <div><h3 style="font-size:16px;margin-bottom:12px">密度：中国还没到顶</h3><div class="tbw" id="ifrDens"></div></div>
+  </div>
+  <div class="note" style="margin-top:18px" id="ifrSum"></div>
+
+  <h3 style="font-size:16px;margin:34px 0 12px">美国市场（原文口径，含一处口径修正）</h3>
+  <div class="grid g2">
+    <div><h3 style="font-size:15px;margin-bottom:12px;color:var(--tx2)">钱是真的，招聘落后于融资</h3><div class="tbw" id="usCap"></div></div>
+    <div><h3 style="font-size:15px;margin-bottom:12px;color:var(--tx2)">薪资（各来源互相矛盾，所以给区间）</h3><div class="tbw" id="usSal"></div></div>
+  </div>
+  <div class="grid g3" style="margin-top:18px" id="usNotes"></div>
+  <div class="note warn" style="margin-top:18px"><span class="lb">口径</span><b id="methodTxt"></b></div>
+</div></section>
+
+<!-- ============ 勘误 ============ -->
+<section id="errata"><div class="wrap">
+  <div class="sh"><span class="n">07</span><h2>三处需要修正的地方</h2></div>
+  <p class="sd">
+    原文里每一个价格和链接，作者声称都在 2026 年 9 月核过。中文核查抽核了十几处，大部分准确，但有三处不对。
+    这三处是本站最该被读到的部分——照着原文的错误信息做，面试里会露馅。
+  </p>
+  <div id="errataList"></div>
+
+  <h3 style="font-size:16px;margin:32px 0 12px">附：逐条核查记录</h3>
+  <div class="tbw" id="verified"></div>
+  <div class="note warn" style="margin-top:16px"><span class="lb">未复核</span><span id="notVer"></span></div>
+</div></section>
+
+<!-- ============ 核验状态 ============ -->
+<section id="verify"><div class="wrap">
+  <div class="sh"><span class="n">08</span><h2>核验状态：哪些我亲自看过，哪些没有</h2></div>
+  <p class="sd">
+    这一节存在的唯一目的，是让你一眼分清站里每条数字和每条链接的可信程度。
+    我不会用一份看起来很完整的列表掩盖其中有一部分我根本没打开过。<br>
+    <span style="color:var(--tx3);font-size:13px">实测时间：<span id="vtested"></span>　·　<span id="vmethod"></span></span>
+  </p>
+
+  <div class="note warn"><span class="lb">占位待补</span>
+    下列 <b id="vTotal"></b> 条未独立核验。<b id="vNote"></b>
+  </div>
+
+  <h3 style="font-size:16px;margin:28px 0 12px">A 类 · 站点反爬，返回 403 —— 主机在线，内容页我没能打开（<span id="cBot"></span> 条）</h3>
+  <p style="color:var(--tx3);font-size:13.5px;margin:0 0 12px">
+    403 本身证明服务器在正常响应，但内容我没有读到。<b>不等于链接失效，也不等于内容有误</b>——只是我无法为它们背书。
+  </p>
+  <div class="tbw" id="tblBot"></div>
+
+  <h3 style="font-size:16px;margin:30px 0 12px">B 类 · 本机网络受限，既不能证实也不能证伪（<span id="cNet"></span> 条）</h3>
+  <p style="color:var(--tx3);font-size:13.5px;margin:0 0 12px">
+    这台机器上所有域名都解析到 <code class="mono">172.19.x.x</code> 私有段，存在出网代理过滤。
+    这 4 条 curl 与真实浏览器均失败。<b>我不能说它们是死链，也不能说它们有效——我只知道我这边看不到。</b>
+  </p>
+  <div class="tbw" id="tblNet"></div>
+
+  <h3 style="font-size:16px;margin:30px 0 12px">C 类 · 原文自己就标注「未核验」</h3>
+  <div class="tbw" id="tblSrc"></div>
+
+  <h3 style="font-size:16px;margin:34px 0 12px">来源可信度分级</h3>
+  <p class="sd" style="margin-bottom:16px">
+    「数字看起来像真的」和「数字能被追溯到官方口径」是两回事。下面把站里的数字按这个标准分四档。
+  </p>
+  <div id="prov"></div>
+
+  <h3 style="font-size:16px;margin:34px 0 12px">我没有收录的内容（明确说明，而不是让它悄悄消失）</h3>
+  <div class="grid g3" id="omitted"></div>
+</div></section>
+
+<!-- ============ 结语 ============ -->
+<section id="ending"><div class="wrap">
+  <div class="sh"><span class="n">09</span><h2>这份路线图真正的那句话</h2></div>
+  <p class="sd">
+    原文结尾作者自己泼了盆冷水，中文核查认为这是全文最可信的一段：这份路线图不会让你在六个月内成为高级机器人工程师。
+    这个领域的「高级」意味着五年以上在真实机器人上部署实时系统，原文作者查过的每一份招聘信息都写着这条。
+    它能让你成为的是：一个能造、能调、能交付可工作机器人的人。
+  </p>
+  <div class="grid g3" id="closing"></div>
+  <div class="last" style="margin-top:38px">去造一个会动的东西。</div>
+  <p style="text-align:center;color:var(--tx2);font-size:14px;max-width:640px;margin:14px auto 0" id="lastCn"></p>
+</div></section>
+
+<footer><div class="wrap">
+  <p>
+    本站整理自 <a href="https://x.com/DeRonin_/status/2095180126359105955" target="_blank" rel="noopener noreferrer">Ronin《How to become a Robotics Engineer in 6 months》</a>
+    （2026-09-02）与 <a href="https://mp.weixin.qq.com/s/0DaRYVxONc7XodmpVXornw" target="_blank" rel="noopener noreferrer">进化三部曲《六个月自学机器人》</a>（2026-09-25）。<br>
+    所有链接与价格均出自上述两篇，未作推测性添加。价格与版本会随时间变化，动手前请回原始链接复核。
+  </p>
+  <p style="margin-top:10px">© <span id="yr"></span> · 供学习使用</p>
+</div></footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

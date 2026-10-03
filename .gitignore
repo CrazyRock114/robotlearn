@@ -1,0 +1,9 @@
+.DS_Store
+.vercel
+node_modules
+*.log
+
+# 本地调研原件（不公开：英文原文为他人版权作品全文）
+/x-article-en.md
+/x-thread-raw.txt
+/urls.txt
