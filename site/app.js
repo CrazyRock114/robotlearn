@@ -445,6 +445,23 @@
   $('#vtested').textContent = V.testedAt;
   $('#vmethod').textContent = V.method;
 
+  /* ---------- 本轮核验结果 ---------- */
+  const R = SITE.roundVerify;
+  if (R) {
+    $('#rvDate').textContent = R.date;
+    $('#rvMethod').textContent = R.method;
+    $('#rvOk').innerHTML = `<table><thead><tr><th>条目</th><th>核验结果</th></tr></thead><tbody>` +
+      R.ok.map(x => `<tr><td><b>${esc(x.n)}</b></td><td style="color:var(--tx2)">${x.r}</td></tr>`).join('') +
+      `</tbody></table>`;
+    $('#rvReplaced').innerHTML = `<h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:10px">本轮更换的链接</h4>` +
+      `<div class="tbw"><table><thead><tr><th>条目</th><th>原链接</th><th>改为</th><th>原因</th></tr></thead><tbody>` +
+      R.replaced.map(x => `<tr><td><b>${esc(x.n)}</b></td>
+        <td><code class="mono" style="color:var(--tx3)">${esc(x.from)}</code></td>
+        <td><code class="mono" style="color:var(--ok)">${esc(x.to)}</code></td>
+        <td style="color:var(--tx2)">${esc(x.why)}</td></tr>`).join('') + `</tbody></table></div>`;
+    $('#rvErrata').textContent = R.newErrata.join('　·　');
+  }
+
   /* ---------- 导航高亮 ---------- */
   const secs = Array.from(document.querySelectorAll('section[id]'));
   const links = Array.from(document.querySelectorAll('nav a.n'));

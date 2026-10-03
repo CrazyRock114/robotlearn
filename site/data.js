@@ -227,7 +227,7 @@ SITE.months = [
           { n: 'SparkFun TB6612FNG  breakout', u: 'https://www.sparkfun.com/sparkfun-motor-driver-dual-tb6612fng-1a.html', p: '$14.77', d: 'L298N 的正确默认替代品。' },
           { n: 'Pololu 带编码器减速电机组件', u: 'https://www.pololu.com/product/3675', p: '$19.95 / 个', d: '编码器接线已经解决好了。' },
           { n: 'Pololu A4988 步进驱动板', u: 'https://www.pololu.com/product/1182', p: '$8.95', d: '' },
-          { n: 'FeeTech STS3215 智能舵机，12V，30 kg·cm', u: 'https://www.robotshop.com/products/feetech-12v-30kgcm-magnetic-encoding-servo-sts3215', p: '$31.71 @ RobotShop', d: '开源 SO-101 机械臂用的就是这颗舵机。' }
+          { n: 'FeeTech STS3215 智能舵机（SO-101 用 7.4V）', u: 'https://github.com/TheRobotStudio/SO-ARM100', p: '官方 BOM：Alibaba $13.89 / 淘宝 ￥97.72', d: '⚠ SO-101 官方 BOM 用的是 7.4V 版本（堵转 16.5kg·cm），不是 12V 30kg·cm。12V 版是可选升级，且必须同时换 12V 5A+ 电源；主臂恒为 7.4V。原文把它说成「SO-101 用的舵机」不准确，此处改用官方 BOM 链接。' }
         ],
         motors: [
           { t: '有刷直流减速电机', d: '最便宜，要配 H 桥；不加编码器就没有位置反馈。第一台小车的默认选择。' },
@@ -244,7 +244,7 @@ SITE.months = [
         resources: [
           { n: 'Adafruit BNO085 九轴 IMU 指南', u: 'https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/overview', d: '讲的是一颗在片上做传感器融合、直接给你四元数的 IMU——这是「用钱买掉数学」的选项。' },
           { n: 'Kalman and Bayesian Filters in Python — Roger Labbe', u: 'https://rlabbe.github.io/Kalman-and-Bayesian-Filters-in-Python/', p: '免费 · CC-BY', d: 'Jupyter notebook 带可运行代码和已解习题，覆盖 g-h、离散贝叶斯、KF、EKF、UKF 和粒子滤波。现存最好的免费滤波教育材料。' },
-          { n: 'MathWorks：理解传感器融合与跟踪', u: 'https://www.mathworks.com/videos/series/understanding-sensor-fusion-and-tracking.html', p: '免费', d: '六个短单元，从「什么是传感器融合」到融合 IMU 和 GPS 求位姿。动代码之前先建立概念的那一步。' },
+          { n: 'MathWorks：理解传感器融合与跟踪', u: 'https://www.mathworks.com/videos/series/understanding-sensor-fusion-and-tracking.html', p: '免费', d: '六个短单元，从「什么是传感器融合」到融合 IMU 和 GPS 求位姿。动代码之前先建立概念的那一步。2026-10-03 实测：正好 6 个视频，与原文「Six short parts」完全一致。' },
           { n: 'HC-SR04 超声波', u: '', p: '$3.95', d: '便宜的避障，锥角很宽，在软表面表现很差。' },
           { n: 'VL53L0X 飞行时间激光', u: '', p: '$14.95', d: '35 度窄锥角，没有双重成像的问题。' },
           { n: 'MPU-6050 六轴 IMU', u: '', p: '$12.95', d: '经典便宜款，融合自己做——而这正是重点。' },
@@ -327,8 +327,8 @@ SITE.months = [
         rtype: 'hardware',
         resources: [
           { n: 'Creality Ender-3 V3 SE', u: 'https://store.creality.com/products/ender-3-v3-se-3d-printer', p: '$199', d: '国产品牌，国内买更便宜，不用换推荐。' },
-          { n: 'Bambu Lab A1 mini', u: 'https://www.bestbuy.com/product/bambu-lab-a1-mini-3d-printer-silver/CZTZV9ZGGV', p: '$219.99', d: '国产品牌。' },
-          { n: 'Bambu Lab A1', u: 'https://www.bestbuy.com/product/bambu-lab-a1-3d-printer-silver/CZW2ZH33H4', p: '$299.99', d: '256mm 行程，做大支架时你会想要这个。国产品牌。' },
+          { n: 'Bambu Lab A1 mini', u: 'https://store.bambulab.com/en/products/a1-mini', p: '主机 $219（Combo 套装 $329）', d: '国产品牌拓竹（Bambu Lab）。已换官方直营链接——原文用的 Best Buy 既是第三方零售，国内读者也够不着。2026-10-03 实测在售。' },
+          { n: 'Bambu Lab A1', u: 'https://store.bambulab.com/en/products/a1', p: '主机 $299（Combo 套装 $399）', d: '256mm 行程，做大支架时你会想要这个。国产品牌拓竹。已换官方直营链接，2026-10-03 实测在售。注意别把 Combo 套装价当成主机价。' },
           { n: 'Creality K1C', u: 'https://store.creality.com/products/k1c-3d-printer', p: '$369', d: '封闭腔体 + 硬化喷嘴，能打碳纤耗材。国产品牌。' },
           { n: 'Bambu Lab P1S', u: 'https://us.store.bambulab.com/products/p1s', p: '$799', d: '封闭 CoreXY，ABS 和 ASA。国产品牌。' },
           { n: 'OrcaSlicer 校准 wiki', u: 'https://github.com/OrcaSlicer/OrcaSlicer/wiki/Calibration', p: '免费', d: '温度、流量、压力提前、回抽和公差校准，按推荐的顺序来。这是任何想让零件装得上的人最有用的一份切片文档。' },
@@ -449,7 +449,7 @@ SITE.months = [
         resources: [
           { n: 'ROS 2 官方教程', u: 'https://docs.ros.org/en/jazzy/Tutorials.html', p: '免费', d: '规范参考，结构上正好围绕节点、话题、服务、动作、参数、launch、tf2 和 URDF 展开。它是参考级而不是教学级，所以要配视频看。' },
           { n: 'The Construct', u: 'https://www.theconstruct.ai/', p: '免费档 · 付费从 €39.97/月', d: '一切都在浏览器里的 ROS 环境和仿真机器人上跑，消除了新手最大的摩擦点：不用双系统 Ubuntu、不用装一个周末、不用显卡。免费档包含三门完整课程。' },
-          { n: 'Edouard Renard：ROS 2 for Beginners Level 1（Udemy）', u: 'https://www.udemy.com/course/ros2-for-beginners/', p: '约 $10–20（打折）', d: '十三小时，Python 和 C++ 双语，覆盖节点、包、话题、服务、自定义接口、参数和 launch 文件。永远不要按原价买，Udemy 基本一直在打折。' },
+          { n: 'Edouard Renard：ROS 2 for Beginners Level 1（Udemy）', u: 'https://www.udemy.com/course/ros2-for-beginners/', p: '约 $10–20（打折）', d: 'Python 和 C++ 双语，覆盖节点、包、话题、服务、自定义接口、参数和 launch 文件。永远不要按原价买，Udemy 基本一直在打折。2026-10-03 实测：现名《ROS 2 for Beginners (ROS Jazzy - 2026)》，Edouard Renard 开设，4.7★ / 6,964 评价 / 32,877 学员，2026-01 更新，11 节 108 讲 13h13m，含 3 节免费预览。价格不在公开页公布（schema.org 标 Paid、price 为 0 占位），随地区与账号浮动，$10–20 的说法我无法独立证实。' },
           { n: 'Articulated Robotics — Josh Newans', u: 'https://articulatedrobotics.xyz/tutorials/', p: '免费', d: '现存最好的免费端到端叙事：设计一个机器人、写 URDF、仿真它、加 ros2_control、放到树莓派上接激光雷达，然后 SLAM 和导航。在 ros2_control 上尤其好，而几乎所有别的资源在这块都搞砸。' },
           { n: 'MOGI-ROS：完整大学课程', u: 'https://github.com/orgs/MOGI-ROS/repositories', p: '免费 · Apache 2.0', d: '基于 ROS 2 Jazzy + Gazebo Harmonic 的真实一学期课程大纲，从发布/订阅一路到 URDF、传感器、导航和 MoveIt 2 机械臂，每一周都有能跑的代码。' },
           { n: 'Automatic Addison', u: 'https://automaticaddison.com/tutorials/', p: '免费', d: '按发行版组织的菜谱式指南，值得注意的是它已经同时带上了 Lyrical 轨道。需要「在 Jazzy 里怎么写一个 action」时来这里，而不是上一整门课。' }
@@ -552,7 +552,7 @@ SITE.months = [
         focus: ['P、I、D 各自在物理上做什么，以及各自的失效模式', '积分饱和，以及为什么机械臂脱离限位时会猛地一甩', '为什么微分项放大传感器噪声、需要滤波', '稳态误差，以及什么时候该加积分、什么时候该做重力补偿', '前馈——大多数人从来不加，而它是最便宜的性能提升'],
         rtype: 'course',
         resources: [
-          { n: 'Understanding PID Control（MATLAB Tech Talks / Brian Douglas）', u: 'https://www.mathworks.com/videos/series/understanding-pid-control.html', p: '免费', d: '七个单元：什么是 PID、积分饱和、微分滤波、调参，以及手动与自动调参。从零到本周就能用的控制器最快的路。' },
+          { n: 'Understanding PID Control（MATLAB Tech Talks / Brian Douglas）', u: 'https://www.mathworks.com/videos/series/understanding-pid-control.html', p: '免费', d: '七个单元：什么是 PID、积分饱和、微分滤波、调参，以及手动与自动调参。从零到本周就能用的控制器最快的路。2026-10-03 实测：共 7 个视频（What Is PID Control? / Anti-windup / Expanding Beyond a Simple Derivative / A PID Tuning Guide / 3 Ways to Build a Model / Manual and Automatic Tuning Methods），与原文描述逐条对上。' },
           { n: 'Brian Douglas：控制系统讲义', u: 'https://www.youtube.com/@BrianBDouglas/playlists', p: '免费', d: '直觉优先的讲解，横跨 PID、状态空间、鲁棒控制和无人机控制。对没有任何正式控制课背景的人最合适。' },
           { n: 'The Fundamentals of Control Theory — Brian Douglas', u: 'https://engineeringmedia.com/books', p: '免费 · Creative Commons', d: '视频的文字配套，是连贯的叙事而不是散落的课。' },
           { n: 'Control Bootcamp — Steve Brunton', u: 'https://www.youtube.com/playlist?list=PLMrJAkhIeNNR20Mz-VpzgfQs5zrYi085m', p: '免费', d: '39 个视频，进入状态空间、可控性、可观测性、LQR 和卡尔曼滤波的正确起点。' },
@@ -564,7 +564,7 @@ SITE.months = [
         focus: ['把系统表示成状态、输入、输出，而不是传递函数', 'LQR 就是一套有原则的选增益方法', 'MPC 买到的是约束，付出的是算力', '欠驱动，以及执行器少于自由度的机器人为什么需要完全不同的思路'],
         rtype: 'course',
         resources: [
-          { n: 'Understanding Model Predictive Control（MATLAB Tech Talks）', u: 'https://www.mathworks.com/videos/series/understanding-model-predictive-control.html', p: '免费', d: '七个单元，从为什么用 MPC 到自适应和非线性变体，以及怎么让它跑到足够快以便实时使用。' },
+          { n: 'Understanding Model Predictive Control（MATLAB Tech Talks）', u: 'https://www.mathworks.com/videos/series/understanding-model-predictive-control.html', p: '免费', d: '从为什么用 MPC 到自适应和非线性变体，以及怎么让它跑到足够快以便实时使用。⚠ 勘误见下：原文说「七个单元」，2026-10-03 实测该页实际列出 10 个视频（Why Use MPC? / What Is MPC? / MPC Design Parameters / Adaptive, Gain-Scheduled, and Nonlinear MPC / How to Run MPC Faster 等，后 5 个偏工具与硬件演示）。主题描述无误，数字对不上。' },
           { n: 'Underactuated Robotics — Russ Tedrake, MIT', u: 'https://underactuated.csail.mit.edu/index.html', p: '免费', d: '这是控制理论变成机器人学的地方：摆、小车倒立摆、行走、奔跑和人形，配动态规划、LQR、Lyapunov 分析和轨迹优化。笔记、PDF 和讲课视频全部免费。' }
         ]
       },
@@ -585,7 +585,7 @@ SITE.months = [
         rtype: 'course',
         resources: [
           { n: 'OpenCV 官方 Bootcamp', u: 'https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about', p: '免费', d: 'OpenCV 自己出的两到三小时官方课程，覆盖图像处理、滤波、边缘检测、跟踪和 DNN 模块。从这个开始，而不是买付费课。' },
-          { n: 'OpenCV 相机标定教程（官方文档）', u: 'https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html', p: '免费', d: '规范走查，含完整 Python 代码，从棋盘格角点到去畸变再到重投影误差。每个机器人工程师都必须能凭记忆做出来。' },
+          { n: 'OpenCV 相机标定教程（官方文档）', u: 'https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html', p: '免费', d: '规范走查，含完整 Python 代码，从棋盘格角点到去畸变再到重投影误差。每个机器人工程师都必须能凭记忆做出来。2026-10-03 实测：链接有效，当前重定向至 OpenCV 4.13.0，含 Calibration / Undistortion / cv.undistort 三节，内容与原文描述一致。' },
           { n: 'Cyrill Stachniss 讲课，University of Bonn', u: 'https://www.ipb.uni-bonn.de/online-training-robotics/', p: '免费', d: '完整的大学课程录像，覆盖移动感知、摄影测量和 SLAM，是几何那一侧最好的免费来源：投影几何、光束法平差、EKF 和图 SLAM。' },
           { n: 'Open3D 点云教程', u: 'https://www.open3d.org/docs/release/tutorial/geometry/pointcloud.html', p: '免费', d: '体素下采样、法向估计、ICP 配准、平面分割和聚类，对已经在 Python 里的人比 PCL 少太多摩擦。' }
         ]
@@ -795,6 +795,26 @@ SITE.errata = [
     fact: 'O*NET 上机器人工程师的职业条目（编号 17-2199.08）页面上确实是这两个数字，但每一处都标着同一行小字：数据来自「Engineers, All Other」，也就是「其他所有工程师」这个兜底大类。同一页显示这个大类十年的预计岗位空缺是 9,300 个。',
     why: '美国官方统计里根本没有「机器人工程师」这个独立职业的薪资和增长数据，它被并进了一个装剩下所有工程师的大类。所以这个数字既不能证明机器人岗位涨得慢，也不能证明涨得快——它根本不在统计机器人岗位。',
     impact: '这不怪作者，怪统计体系还没给这个职业单独设格子。一个新职业在官方统计里没有位置，本身就是它还年轻的证据。'
+  },
+  {
+    n: 4,
+    title: 'SO-101 舵机电压：7.4V 还是 12V',
+    where: '第 2 月 · 电机、驱动与执行',
+    orig: '原文列了一款 RobotShop 的「FeeTech STS3215，12V，30 kg·cm」，并称它「是开源 SO-101 机械臂用的舵机」。',
+    verdict: '本站 2026-10-03 对照官方 BOM 核实后判定：说法不准确。',
+    fact: 'SO-ARM100 官方物料清单用的是 <b>7.4V</b> 版本（1/345、1/191、1/147 三种齿比，堵转 16.5kg·cm @6V）。仓库原文写得很清楚：12V 30kg·cm 版是「如果你想要更强的电机」的<b>可选升级</b>，而且换 12V 就必须同时把 5V 电源换成 12V 5A 以上；<b>主臂恒为 7.4V</b>。',
+    why: '按 12V 去买的人会多花一倍电费、买到与官方 BOM 不同的齿比规格，还可能因为沿用 5V 电源而烧舵机。',
+    impact: '已把该条目改为链接官方 BOM 并标注 7.4V / 12V 的区别'
+  },
+  {
+    n: 5,
+    title: 'MathWorks MPC 系列：说七个，实际十个',
+    where: '第 5 月 · 状态空间、LQR 与 MPC',
+    orig: '原文说 Understanding Model Predictive Control 是「Seven parts from why to use MPC through adaptive and nonlinear variants, and how to make it run fast enough to be real」。',
+    verdict: '本站 2026-10-03 打开页面实测：主题描述完全对应，但数量对不上。',
+    fact: '该页当前实际列出 <b>10 个视频</b>：Why Use MPC? / What Is MPC? / MPC Design Parameters / Adaptive, Gain-Scheduled, and Nonlinear MPC / How to Run MPC Faster，以及 5 个偏工具与硬件演示的（Simulink 控制器设计、FORCESPRO 非线性 MPC、Speedgoat 实时部署、低成本双旋翼系统辨识等）。对照组：同站的传感器融合系列确实是 6 个、PID 系列确实是 7 个，两条都对得上，只有 MPC 这条不符。',
+    why: '不构成内容错误，但按「七个」去规划学习进度的人会以为自己看完了。',
+    impact: '已把该条描述改为「主题无误，数量对不上」并写明实际为 10 个'
   }
 ];
 
@@ -839,29 +859,21 @@ SITE.verif = {
   testedAt: '2026-09-30',
   method: '本机 curl（跟随重定向，18–45 秒超时，真实浏览器 UA）+ Chrome DevTools 浏览器二次确认',
   bot: [
-    { u: 'https://www.allaboutcircuits.com/textbook/', n: 'All About Circuits《Lessons in Electric Circuits》', m: 1 },
-    { u: 'https://www.mathworks.com/videos/series/understanding-pid-control.html', n: 'Understanding PID Control（MATLAB Tech Talks）', m: 5 },
-    { u: 'https://www.mathworks.com/videos/series/understanding-sensor-fusion-and-tracking.html', n: 'MathWorks：理解传感器融合与跟踪', m: 2 },
-    { u: 'https://www.mathworks.com/videos/series/understanding-model-predictive-control.html', n: 'Understanding Model Predictive Control（MATLAB Tech Talks）', m: 5 },
-    { u: 'https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html', n: 'OpenCV 相机标定教程', m: 5 },
+    { u: 'https://www.allaboutcircuits.com/textbook/', n: 'All About Circuits《Lessons in Electric Circuits》', m: 1, note: 'Cloudflare 托管挑战，headless 浏览器 25 秒未通过' },
     { u: 'https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about', n: 'OpenCV 官方 Bootcamp', m: 5 },
-    { u: 'https://www.udemy.com/course/ros2-for-beginners/', n: 'Edouard Renard：ROS 2 for Beginners Level 1', m: 4 },
-    { u: 'https://www.udemy.com/course/ros2-tf-urdf-rviz-gazebo/', n: 'Edouard Renard Level 2：TF、URDF、RViz、Gazebo', m: 4 },
-    { u: 'https://www.glassdoor.com/Interview/robotics-engineer-interview-questions-SRCH_KO0,17.htm', n: 'Glassdoor 机器人工程师面试题库', m: 6 },
-    { u: 'https://www.robotshop.com/products/feetech-12v-30kgcm-magnetic-encoding-servo-sts3215', n: 'FeeTech STS3215 智能舵机', m: 2 },
-    { u: 'https://www.thingiverse.com/thing:1454048', n: 'EEZYbotARM MK2', m: 3 },
+    { u: 'https://www.udemy.com/course/ros2-tf-urdf-rviz-gazebo/', n: 'Edouard Renard Level 2：TF、URDF、RViz、Gazebo', m: 4, note: '同站第一门课已放行，这门被拦；疑似频率限制' },
+    { u: 'https://www.glassdoor.com/Interview/robotics-engineer-interview-questions-SRCH_KO0,17.htm', n: 'Glassdoor 机器人工程师面试题库', m: 6, note: 'Glassdoor 主动跳转到 Security 拦截页，非 Cloudflare 挑战' },
+    { u: 'https://www.thingiverse.com/thing:1454048', n: 'EEZYbotARM MK2', m: 3, note: 'Cloudflare 挑战 + 官方 API 需鉴权返回 401。Thingiverse 经历过平台迁移，此链接存在失效可能，优先复核' },
     { u: 'https://action.everylibrary.org/how_to_find_a_makerspace_near_you', n: '公共图书馆创客空间', m: 3 }
   ],
   net: [
-    { u: 'https://www.bestbuy.com/product/bambu-lab-a1-mini-3d-printer-silver/CZTZV9ZGGV', n: 'Bambu Lab A1 mini', m: 3 },
-    { u: 'https://www.bestbuy.com/product/bambu-lab-a1-3d-printer-silver/CZW2ZH33H4', n: 'Bambu Lab A1', m: 3 },
-    { u: 'https://www.printables.com/model/57067-clearance-and-tolerance-3d-printer-gauge', n: '间隙与公差 3D 打印量规', m: 3 },
-    { u: 'https://robonine.com/shop/so-arm101-black-robotic-arm-kit/', n: 'Robonine SO-ARM101 完整套件', m: 3 }
+    { u: 'https://www.printables.com/model/57067-clearance-and-tolerance-3d-printer-gauge', n: '间隙与公差 3D 打印量规', m: 3, note: '本机 DNS 解析到 172.19.x.x 私有段，curl 与浏览器均失败；add www 后同样不通' },
+    { u: 'https://robonine.com/shop/so-arm101-black-robotic-arm-kit/', n: 'Robonine SO-ARM101 完整套件', m: 3, note: '无 www 时连接层被拦；加 www 后浏览器报 ERR_CONNECTION_CLOSED' }
   ],
   src: [
     { u: '', n: 'ESP32 通用克隆板', m: 2, note: '原文原文即标注「未核验但为众所周知的街价」，我照实转述，未做核实' }
   ],
-  note: '我没有为这些条目编造任何补充内容——说明与价格都是两篇原文的转述。占位待你协助通过验证后，按上表逐条回填实际页面信息。'
+  note: '我没有为这些条目编造任何补充内容——说明与价格都是两篇原文的转述。占位待你协助通过验证后，按上表逐条回填实际页面信息。2026-10-03 第一轮已核验 6 条、替换 3 条链接，详见「本轮核验结果」。'
 };
 
 /* 来源可信度分级：区分「官方数据」与「作者估算」，避免二者看起来同样可信 */
@@ -906,3 +918,29 @@ SITE.omitted = [
   { t: '英文原文第 44 行引用的「27 个项目」之外的补充图表', d: 'X 原文为纯文本长文，无图片。' },
   { t: '两个来源页的评论区', d: 'X 线程下有 3 条回复（Roan、Chase、ArchiveExplorer），其中 Chase 用 Grok 做了一个第三方站点 shale-summit-spring-slate.grok.me。本站未采集这些内容。' }
 ];
+
+
+/* ============================================================
+   2026-10-03 第一轮人工核验结果
+   ============================================================ */
+SITE.roundVerify = {
+  date: '2026-10-03',
+  method: '本机真实浏览器（Chrome，非 headless）逐条打开 + curl 交叉验证；SO-101 价格另用 GitHub 官方 BOM 原始文件核对',
+  ok: [
+    { n: 'Edouard Renard：ROS 2 for Beginners Level 1（Udemy）', r: '现名《ROS 2 for Beginners (ROS Jazzy - 2026)》；Edouard Renard 开设；4.7★ / 6,964 评价 / 32,877 学员；2026-01 更新；11 节 108 讲 13h13m；含 3 节免费预览。原文「十三小时」属实。⚠ 价格不在公开页公布（schema.org 标 Paid、price 为 0 占位），$10–20 的说法我无法独立证实，已在条目中如实标注。' },
+    { n: 'OpenCV 相机标定教程', r: '链接有效，当前重定向至 OpenCV 4.13.0；含 Calibration / Undistortion / cv.undistort 三节，覆盖棋盘格角点、畸变与重投影误差，与原文描述一致。' },
+    { n: 'Understanding PID Control（MathWorks）', r: '共 7 个视频，主题（什么是 PID / 抗积分饱和 / 超越简单微分项 / 调参指南 / 建模 / 手动与自动调参）与原文「七个单元」逐条对上。' },
+    { n: 'Understanding Sensor Fusion and Tracking（MathWorks）', r: '正好 6 个视频，与原文「Six short parts」完全一致。' },
+    { n: 'SO-ARM100 官方物料清单（经 GitHub 原始文件核对）', r: '主从一对 $229.88、单条从臂 $121.94、淘宝 ￥1343.16 / ￥682.23、欧洲 €124.3、日本 ¥24,414、STS3215 四地 $13.89 / €12.2 / ￥97.72 / ¥2,980 —— 本站所引全部数字逐项准确。同时据此发现勘误④（7.4V vs 12V）。' },
+    { n: 'Bambu Lab A1 / A1 mini 官方商店页', r: '两台均 InStock + 可加入购物车。主机价 A1 $299、A1 mini $219，与原文的 $299.99 / $219.99 基本一致（原文用的是 Best Buy 零售价）。⚠ 页面另有 Combo 套装价 $399 / $329，别混。已把 Best Buy 链接换成官方直营。' }
+  ],
+  replaced: [
+    { n: 'Bambu Lab A1 / A1 mini', from: 'bestbuy.com', to: 'store.bambulab.com/en/products/a1（及 a1-mini）', why: 'Best Buy 既被我这边网络层拦死，又是第三方零售，且国内读者够不着；改为官方直营后实测可达。' },
+    { n: 'FeeTech STS3215 智能舵机', from: 'robotshop.com（12V 30kg·cm）', to: 'github.com/TheRobotStudio/SO-ARM100（官方 BOM）', why: 'RobotShop 链接被 Cloudflare 拦截且卖的是 12V 可选升级版；官方 BOM 才是 SO-101 实际使用的 7.4V 版本，且来源更权威。' }
+  ],
+  newErrata: [
+    '勘误④：SO-101 官方 BOM 用 7.4V 舵机，12V 30kg·cm 是可选升级且须换 12V 5A+ 电源，主臂恒为 7.4V',
+    '勘误⑤：MathWorks MPC 系列实际 10 个视频，原文说「seven parts」'
+  ],
+  still: '仍有 9 条未能核验（6 条 Cloudflare / 主动拦截 + 2 条网络层不可达 + 1 条原文自述未核验），占位待人工协助。'
+};
